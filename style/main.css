@@ -190,12 +190,12 @@ background: var(--header-bg-color);
     z-index: 200;
 }
 
-.item {
+.dechet {
     transform: scale(1);
     transition: all 0.2s ease-in-out;
 }
 
-.item:hover {
+.dechet:hover {
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
     cursor: pointer;

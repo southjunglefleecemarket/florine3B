@@ -1,0 +1,78 @@
+body {
+	margin: 0;
+}
+
+.container-fluid {
+	background-image: linear-gradient(to bottom, #fbb034 0%, #045de9 100%);
+}
+.column {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+
+.column1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.indication {
+	font-size: 1.125rem;
+	font-weight: bold;
+	position: fixed;
+	color: white;
+}
+
+/* .dechets-container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border: solid red;
+} */
+
+.dechet {
+	/* width: 8vw; */
+	height: 100px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.hidden {
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.5s linear;
+}
+
+/* modif les valeurs bottom, top , left ou right pour déplacer les objets */
+
+.dechet:nth-of-type(1) {
+	border: solid green;
+	bottom: 10%;
+}
+.dechet:nth-of-type(2) {
+	border: solid yellow;
+	top: 4%;
+	left: 60%;
+}
+.dechet:nth-of-type(3) {
+	border: solid pink;
+	right: 40%;
+	top: 50%;
+}
+.dechet:nth-of-type(4) {
+	border: solid purple;
+	right: 15%;
+	top: 60%;
+}
+.dechet:nth-of-type(5) {
+	border: solid black;
+	left: 5%;
+	top: 40%
+}
+
+.popup {
+	height: 300px;
+}

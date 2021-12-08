@@ -1,5 +1,7 @@
 :root{
     --header-height: 3em;
+    --temp-bg-color: hsl(245, 23%, 81%);
+    --header-bg-color: hsl(0, 0%, 0%);
 }
 
 *{
@@ -12,6 +14,10 @@ html {
     height: 6387px;
 }
 
+body {
+    background-color: var(--temp-bg-color);
+}
+
 .main-header {
     position: fixed;
     top: 0;
@@ -20,13 +26,14 @@ html {
     width: 100%;
     z-index: 100000;
     transition: all 0.2s ease-in-out;
-    height: 5%;
+    height: auto;
     background-color: transparent;
 }
 
 .active {
-    background-color: black;
+    background-color: var(--header-bg-color);
     color: white;
+    box-shadow: 0 0 30px var(--header-bg-color);
 }
 
 /* width */
@@ -47,4 +54,9 @@ background: var(--background);
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 background: var(--background);
+}
+
+#logo {
+    width: 10%;
+    padding: 2% 0% 1% 20%;
 }

@@ -1,7 +1,7 @@
 :root{
     --header-height: 3em;
     --temp-bg-color: hsl(245, 23%, 81%);
-    --header-bg-color: hsl(350, 2%, 47%);
+    --header-bg-color: hsl(109, 57%, 60%);
 }
 
 *{
@@ -110,7 +110,7 @@ background: var(--header-bg-color);
 .dechets-nbr {
     position: relative;
     width: 10%;
-    margin-left: 35%;
+    margin-left: 39%;
     height: auto;
     display: inline-flex;
     align-items:center; 

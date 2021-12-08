@@ -16,6 +16,7 @@ html {
 
 body {
     background-color: var(--temp-bg-color);
+    font-family: almaq-refined;
 }
 
 .main-header {
@@ -28,7 +29,29 @@ body {
     transition: all 0.2s ease-in-out;
     height: auto;
     background-color: transparent;
+    display: flex;
 }
+
+@keyframes sizego {
+    from{transform: scale(0.8); padding: 0 0 0 20%;} 
+    to{transform: scale(1); padding: 2% 0 1% 20%;}   
+}
+
+@keyframes sizeback {
+    from{transform: scale(1); padding: 2% 0 1% 20%;} 
+    to{transform: scale(0.8); padding: 0 0 0 20%;}   
+}
+
+@keyframes sizego-2 {
+    from{font-size: 1em; border: 0;} 
+    to{font-size: 1.5em; border: 1px solid white;}   
+}
+
+@keyframes sizeback-2 {
+    from{font-size: 1.5em; border: 1px solid white;} 
+    to{font-size: 1em; border: 0;}   
+}
+
 
 .active {
     background-color: var(--header-bg-color);
@@ -36,27 +59,82 @@ body {
     box-shadow: 0 0 30px var(--header-bg-color);
 }
 
+.active #logo{
+    transform: scale(0.8);
+    padding: 0 0 0% 20%;
+    transition: all 0.2s;
+    animation: sizeback;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+}
+
+.active .dechets-nbr p{
+    animation: sizeback-2;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    font-size: 1em;
+    transition: all 0.2s;
+    border: 0;
+}
+
 /* width */
 ::-webkit-scrollbar {
-width: 0px;
+width: 5px;
 }
     
 /* Track */
 ::-webkit-scrollbar-track {
-background: var(--colorbg);
+background: white;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-background: var(--background);
+background: black;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-background: var(--background);
+background: grey;
 }
 
 #logo {
     width: 10%;
     padding: 2% 0% 1% 20%;
+    display: inline-flex;
+    transform: scale(1);
+    animation: sizego;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+}
+
+.dechets-nbr {
+    position: relative;
+    width: 10%;
+    margin-left: 35%;
+    height: auto;
+    display: inline-flex;
+    align-items:center;
+    
+    color: white;
+    transform: scale(1);
+    
+}
+
+.dechets-nbr p {
+    text-align: center;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 4%;
+    transform: scale(1);
+    animation: sizego-2;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    font-size: 1.5em;
+}
+
+@font-face {
+    font-family: almaq-refined,sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }

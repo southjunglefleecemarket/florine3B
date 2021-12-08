@@ -7,16 +7,19 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 html {
     width: 100%;
+    overflow-x: hidden;
     height: 6387px;
 }
 
 body {
     background-color: var(--temp-bg-color);
     font-family: almaq-refined;
+    overflow-x: hidden;
 }
 
 .main-header {
@@ -142,4 +145,58 @@ background: var(--header-bg-color);
     background-color: transparent;
     width: 100%;
     height: 100%;
+}
+
+#img-bg {
+    position: absolute;
+    z-index: 1;
+}
+
+.bateau {
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    z-index: 100;
+    padding-top: 5%;
+    transform: translateX(0%);
+}
+
+.bateau svg {
+    width: 60%;
+    transform: scaleX(-100%);
+}
+
+#sac-pla-1{
+    position: absolute;
+    width: 11%;
+    top: 165%;
+    left: 34%;
+    z-index: 200;
+}
+
+#sac-pla-2{
+    position: absolute;
+    width: 9%;
+    top: 200%;
+    left: 47%;
+    z-index: 200;
+}
+
+#petanque{
+    position: absolute;
+    width: 6.5%;
+    top: 163%;
+    right: 5%;
+    z-index: 200;
+}
+
+.item {
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
